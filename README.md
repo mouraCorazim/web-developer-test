@@ -12,7 +12,7 @@ This website must have:
    - You must validate the token
    - Use localStorage to persist the token
 
-2. One "Home" page to list all the followers and who the user is following:
+2. One "Home" page to list all the following users and the repositories:
 
    - Lists must be paginated
 
@@ -21,9 +21,11 @@ This website must have:
    - Email
    - Blog
    - Twitter
-   - Location (You must use [Autocomplete API](https://developers.google.com/places/web-service/autocomplete) to choose the location)
+   - Location (You must use [Autocomplete API](https://developers.google.com/maps/documentation/javascript/places-autocomplete) to choose the location)
    - Hireable
    - Bio
+   
+In the assests folder you can find some inspiration to base your project, but we don't want an exact copy.
 
 Feel free to use any package.
 
@@ -41,6 +43,7 @@ Feel free to use any package.
 2. Automated testing.
 3. Performance.
 4. Responsive website.
+5. Use Autocomplete API [session](https://developers.google.com/maps/documentation/javascript/places-autocomplete#session_tokens)
 
 ## | Development tool 💻
 
