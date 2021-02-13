@@ -1,4 +1,4 @@
-# Developer Test
+# Web Developer Test
 
 ![alt tag](https://s3-sa-east-1.amazonaws.com/images.taximanager.com.br/tripee-banner.png)
 
@@ -24,7 +24,7 @@ This website must have:
    - Location (You must use [Autocomplete API](https://developers.google.com/maps/documentation/javascript/places-autocomplete) to choose the location)
    - Hireable
    - Bio
-   
+
 In the assests folder you can find some inspiration to base your project, but we don't want an exact copy.
 
 Feel free to use any package.
