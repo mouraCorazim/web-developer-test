@@ -1,61 +1,46 @@
-# Web Developer Test
+# Getting Started with Create React App
 
-![alt tag](https://s3-sa-east-1.amazonaws.com/images.taximanager.com.br/tripee-banner.png)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## | The challenge 😎
+## Available Scripts
 
-The purpose of this test is create a website that use the [Github API](https://docs.github.com/en/rest/reference).
-This website must have:
+In the project directory, you can run:
 
-1. One "Login" page for the user type the token that will be used in the Github API.
+### `yarn start`
 
-   - You must validate the token
-   - Use localStorage to persist the token
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-2. One "Home" page to list all the following users and the repositories:
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-   - Lists must be paginated
+### `yarn test`
 
-3. One "Profile" page to update the user:
-   - Name
-   - Email
-   - Blog
-   - Twitter
-   - Location (You must use [Autocomplete API](https://developers.google.com/maps/documentation/javascript/places-autocomplete) to choose the location)
-   - Hireable
-   - Bio
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-In the assests folder you can find some inspiration to base your project, but we don't want an exact copy.
+### `yarn build`
 
-Feel free to use any package.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## | Requirements ⭐
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. Use Typescript.
-2. Write the code in React JS (Bonus: use Next.JS 😍).
-3. Cleand code.
-4. Commit your code during the development(not just when you're done).
-5. Add private routes(the user can access just if have a valid token).
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## | Bonus ⭐⭐
+### `yarn eject`
 
-1. Write clear documentation and how to run the code.
-2. Automated testing.
-3. Performance.
-4. Responsive website.
-5. Use Autocomplete API [session](https://developers.google.com/maps/documentation/javascript/places-autocomplete#session_tokens)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## | Development tool 💻
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Feel free to use the most comfortable tool for you.
-Here we basically use [VS Code](https://code.visualstudio.com/).
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-## | How to participate
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-> Where should I send back the result when I'm done?
+## Learn More
 
-Fork this repo and send us a pull request when you think you are done. You have 1 week to finish the task.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-> What if I have a question?
-
-Just create a new issue in this repo and we will respond and get back to you quickly.
+To learn React, check out the [React documentation](https://reactjs.org/).
