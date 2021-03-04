@@ -1,7 +1,6 @@
-import React, {ReactElement} from 'react'
-
-type InfoCardTextProps = {text: string}
+import React, {ReactElement, createElement} from 'react'
+import {InfoCardTextProps} from '../../../types'
 
 export default function InfoCardText(props: InfoCardTextProps): ReactElement{
-    return React.createElement('p', {className: ""}, props.text)
+    return createElement('p', {className: ""}, props.text)
 }

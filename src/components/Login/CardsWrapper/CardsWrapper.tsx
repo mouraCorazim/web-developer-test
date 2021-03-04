@@ -1,7 +1,6 @@
-import React, { FunctionComponent, ReactElement } from 'react'
-
-type CardsWrapperProps = {children: ReactElement[]}
+import React, { ReactElement, createElement } from 'react'
+import {CardsWrapperProps} from '../../../types'
 
 export default function CardsWrapper(props: CardsWrapperProps): ReactElement{
-    return React.createElement('div', {className: ""}, props.children)
+    return createElement('div', {className: ""}, props.children)
 }

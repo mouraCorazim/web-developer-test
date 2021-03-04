@@ -1,9 +1,8 @@
 import React, {ReactElement} from 'react'
+import {InfoCardProps} from '../../../types'
 
 import InfoCardText from '../InfoCardText/InfoCardText'
 import InfoCardTitle from '../InfoCardTitle/InfoCardTitle'
-
-type InfoCardProps = {title: string, text: string, src: string}
 
 export default function InfoCard(props: InfoCardProps): ReactElement{
     return (

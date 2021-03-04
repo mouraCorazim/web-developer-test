@@ -1,7 +1,6 @@
-import React, {ReactElement} from 'react'
+import React, {ReactElement, createElement} from 'react'
+import {SubTextProps} from '../../../types'
 
-type SubtextProps = {text: string}
-
-export default function SubText(props: SubtextProps): ReactElement{
-    return React.createElement('p', {className: ""}, props.text)
+export default function SubText(props: SubTextProps): ReactElement{
+    return createElement('p', {className: ""}, props.text)
 }

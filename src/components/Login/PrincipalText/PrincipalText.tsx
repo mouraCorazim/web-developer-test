@@ -1,7 +1,6 @@
-import React, {ReactElement} from 'react'
-
-type PrincipalTextProps = {text: string}
+import React, {ReactElement, createElement} from 'react'
+import {PrincipalTextProps} from '../../../types'
 
 export default function PrincipalText(props: PrincipalTextProps): ReactElement{
-    return React.createElement('p', {className: ""}, props.text)
+    return createElement('p', {className: ""}, props.text)
 }
