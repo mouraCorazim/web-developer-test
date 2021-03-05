@@ -4,7 +4,7 @@ import FollowingCard from "./components/FollowingCard/FollowingCard";
 export default function Following(): ReactElement{
     return (
         <>
-            <h1> Foollowing </h1>
+            <h1> Following </h1>
             
             <FollowingCard />
         </>
