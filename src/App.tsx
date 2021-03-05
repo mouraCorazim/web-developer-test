@@ -1,5 +1,4 @@
-import React, {ReactElement, FunctionComponent, useState, createElement} from 'react'
-
+import {ReactElement, createElement} from 'react'
 import {
   BrowserRouter as Router,
   Route,
@@ -11,27 +10,22 @@ import './App.css'
 import Forbidden from './components/Forbidden/Forbidden'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
-import Profile from './components/Profile/Profile'
-
-type RouteProp = {exact: boolean, path: string, component: FunctionComponent}
+import Profile from './components/Home/components/Profile/Profile'
+import { RouteProp } from './types'
 
 const routes: RouteProp[] = [
 
-  { component: Login
-  , exact    : true
-  , path     : '/'         },
+  { component: Login, 
+    exact    : true, 
+    path     : '/'         },
 
-  { component: Home
-  , exact    : true
-  , path     : '/home'     },
+  { component: Home, 
+    exact    : true, 
+    path     : '/home'     },
 
-  { component: Profile   
-  , exact    : true      
-  , path     : '/profile'  },
-
-  { component: Forbidden 
-  , exact    : true      
-  , path     : '/forbidden'},
+  { component: Forbidden, 
+    exact    : true, 
+    path     : '/forbidden'},
 ]
 
 function App(): ReactElement {
@@ -39,7 +33,7 @@ function App(): ReactElement {
     <>
       <Router>
         <Switch>
-          {routes.map((route: RouteProp) => createElement(Route, { ... route }))}
+          {routes.map((route: RouteProp, key: number) => createElement(Route, { key: key, ...route }))}
         </Switch>
       </Router>
     </>

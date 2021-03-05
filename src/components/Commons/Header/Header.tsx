@@ -1,4 +1,4 @@
-import React, {createElement, ReactElement} from 'react'
+import {createElement, ReactElement} from 'react'
 import {HeaderProps} from '../../../types'
 
 export default function Header(props: HeaderProps): ReactElement{
