@@ -1,0 +1,15 @@
+.app-button{
+    background-color: transparent;
+    border: solid #DCDCDC 1px;
+    border-radius: 8px;
+    color: #DCDCDC;
+    font-size: 14pt;
+    outline: none;
+
+    height: 30px;
+}
+
+.app-button:hover{
+    color: #000;
+    cursor: pointer;
+}

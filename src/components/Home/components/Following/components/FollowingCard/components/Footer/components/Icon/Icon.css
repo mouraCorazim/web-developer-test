@@ -1,0 +1,6 @@
+.company-icon, .location-icon{
+    border: none;
+    
+    width: 16px;
+    height: 16px;
+}

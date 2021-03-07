@@ -1,0 +1,6 @@
+.following-card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+}
