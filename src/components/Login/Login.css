@@ -1,0 +1,24 @@
+button{
+    background-color: transparent;
+    border: solid #DCDCDC 1px;
+    border-radius: 8px;
+    color: #DCDCDC;
+    font-size: 14pt;
+    outline: none;
+
+    height: 30px;
+}
+
+button:hover{
+    color: #000;
+    cursor: pointer;
+}
+
+.input-wrapper{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 25%;
+}
