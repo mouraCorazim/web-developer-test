@@ -3,7 +3,8 @@ import {
     ReactElement, 
     FunctionComponent, 
     Props, 
-    ReactNode } from "react"
+    ReactNode, 
+    ClassAttributes} from "react"
 
 export = AppTypes
 export as namespace AppTypes
@@ -16,9 +17,8 @@ declare namespace AppTypes{
     type HeaderProps               = {children: ReactNode}
     type CardsWrapperProps         = {children: ReactNode}
     type InfoCardImageProps        = Props & {svg: string}
-    type InputWrapperProps         = Props & {children: ReactNode}
     type InputProps                = Props
-    type LabelProps                = Props
+    type LabelProps                = Props & {value: string}
     type ButtonProps               = Props & {value: string}
     type RepositoryCardFooterProps = {language: string, updatedAt: string }
 
@@ -32,17 +32,6 @@ declare namespace AppTypes{
         component: FunctionComponent,
         exact    : boolean, 
         path     : string
-    }
-
-    type InputWrapperChild = {
-        component: FunctionComponent,
-        children : ReactNode
-        props    : InputProps | LabelProps | ButtonProps
-    }
-    
-    type HeaderChild = { 
-        component: FunctionComponent, 
-        children : ReactNode
     }
 
     type RepositoryCardProps = {
@@ -59,5 +48,15 @@ declare namespace AppTypes{
         location : string | null,
         bio      : string | null,
         company  : string | null
+    }
+
+    type PageRequest = {
+        page: number, 
+        resource: "repos" | "following"
+    }
+
+    type ObjectRequest = { 
+        url    : RequestInfo, 
+        options: RequestInit | undefined 
     }
 }
