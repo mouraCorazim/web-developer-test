@@ -5,6 +5,7 @@ import "./Input.css"
 export default function Input(props: InputProps): ReactElement{
 
     const inputProperties = {
+        required: true,
         className: "app-input", 
         ...props
     }

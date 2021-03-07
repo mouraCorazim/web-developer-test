@@ -4,11 +4,8 @@ import {
     BrowserRouter as Router,
     Route,
     Link,
-    Switch,
-    useLocation
+    Switch
 } from 'react-router-dom'
-
-import {TransitionGroup, CSSTransition} from 'react-transition-group'
 
 import "./Home.css"
 

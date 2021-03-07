@@ -1,15 +1,20 @@
-import { ReactElement, createElement, FunctionComponent, ReactSVGElement } from 'react'
-import {HeaderChild, InfoCardProps, InputWrapperChild} from '../../types'
-
-import Button from '../commons/Button/Button'
-import Footer from '../commons/Footer/Footer'
-import Header from '../commons/Header/Header'
+import { ReactElement, createElement, useState} from 'react'
+import {Redirect, useLocation} from 'react-router-dom'
+import {InfoCardProps} from '../../types'
+import { Auth } from '../../services/Auth/Auth'
+import { 
+    isAuthenticToken, 
+    isValidToken, 
+    storeToken } from '../../services/Auth/Token'
+import "./Login.css"
+    
 import Input from '../commons/Input/Input'
 import Label from '../commons/Label/Label'
+import Footer from '../commons/Footer/Footer'
+import Header from '../commons/Header/Header'
 import Line from '../commons/Line/Line'
 import CardsWrapper from './components/CardsWrapper/CardsWrapper'
 import InfoCard from './components/InfoCard/InfoCard'
-import InputWrapper from './components/InputWrapper/InputWrapper'
 import PrincipalText from './components/PrincipalText/PrincipalText'
 import SubText from './components/SubText/SubText'
 
@@ -29,46 +34,33 @@ const infoCardsDataList: InfoCardProps[] = [
     infoCardsData("Update", "Are you need a update?",  process.env.PUBLIC_URL + "assets/refresh.png")
 ]
 
-function inputWrapperChildData(component: FunctionComponent, props: any , children : ReactElement[] | string | null ): InputWrapperChild{
-    return { component: component , 
-             props    : props     ,
-             children : children  }
-}
-            
-function makeInputWrapperChildOfData(ch: InputWrapperChild, key: number): ReactElement{
-    return createElement(ch.component, { key: key, ...ch.props }, ch.children)
-}
-
-const inputWrapperChildsDataList: InputWrapperChild[] = [
-    inputWrapperChildData(Label, {for: "asdas"}, "Token"),
-    inputWrapperChildData(Input, {type: "text"}, null),
-    inputWrapperChildData(Button, {value: "login"}, null)
-]
-
-function headerChildsData(component: FunctionComponent, children: ReactElement[] | string | null ){
-    return { component: component,
-             children : children }
-}
-
-function makeHeaderChildOfData(ch: HeaderChild, key: number): ReactElement{
-    return createElement(ch.component, {key: key}, ch.children)
-}
-
 const infoCards: ReactElement[] = infoCardsDataList.map(makeInfoCardOfData)
 
-const inputWrapperChildren: ReactElement[] = inputWrapperChildsDataList.map(makeInputWrapperChildOfData)
-
-const headerChildsDataList: HeaderChild[] = [
-    headerChildsData(InputWrapper, inputWrapperChildren)
-]
-
-const headerChildren: ReactElement[] = headerChildsDataList.map(makeHeaderChildOfData)
-
 export default function Login(): ReactElement{
-    return(
+
+    const [authenticToken, updateAuthToken] = useState(false)
+    const location = useLocation()
+    
+    return (
         <>
-            <Header
-                children = {headerChildren} />
+            <Header>
+                <div className = "input-wrapper">
+                    <Label
+                        for   = "input-token" 
+                        value = "Token"/>
+                    <Input
+                        id   = "input-token" 
+                        type = "text" 
+                        required />
+                    <button
+                        onClick = { () => Auth("c4f37de17bafca064b5652710e7f04e066595368")
+                                            .filter(isValidToken)
+                                            .filter(isAuthenticToken)
+                                            .store(storeToken)? updateAuthToken(true): null } > 
+                        Login 
+                    </button>
+                </div>
+            </Header>
 
             <Line />
 
