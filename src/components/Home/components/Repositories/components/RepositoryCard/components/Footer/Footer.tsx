@@ -1,13 +1,17 @@
 import { ReactElement } from "react"
+import { RepositoryCardFooterProps } from "../../../../../../../../types"
+import "./Footer.css"
 
 import Language from "./components/Language/Language"
-import Update from "./components/Update/Update"
+import UpdatedAt from "./components/UpdatedAt/UpdatedAt"
 
-export default function FollowingCardFooter(): ReactElement{
+export default function FollowingCardFooter(props: RepositoryCardFooterProps): ReactElement{
     return(
-        <>
-            <Language />
-            <Update />
-        </>
+        <div className = "following-card-footer">
+            <Language 
+                value = {props.language} />
+            <UpdatedAt 
+                value = {props.updatedAt} />
+        </div>
     )
 }

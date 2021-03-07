@@ -1,6 +1,13 @@
 import {ReactElement, createElement } from 'react'
 import {CardsWrapperProps} from '../../../../types'
 
+import './CardsWrapper.css'
+
 export default function CardsWrapper(props: CardsWrapperProps): ReactElement{
-    return createElement('div', {className: ""}, props.children)
+
+    const wrapProperties = {
+        className: "cardsWrapper"
+    }
+
+    return createElement('div', wrapProperties, props.children)
 }

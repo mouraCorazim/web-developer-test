@@ -5,12 +5,9 @@ import {
   Switch
 } from 'react-router-dom'
 
-import './App.css'
-
 import Forbidden from './components/Forbidden/Forbidden'
 import Home from './components/Home/Home'
 import Login from './components/Login/Login'
-import Profile from './components/Home/components/Profile/Profile'
 import { RouteProp } from './types'
 
 const routes: RouteProp[] = [
@@ -21,11 +18,11 @@ const routes: RouteProp[] = [
 
   { component: Home, 
     exact    : true, 
-    path     : '/home'     },
+    path     : '/home/repositories' },
 
   { component: Forbidden, 
     exact    : true, 
-    path     : '/forbidden'},
+    path     : '/forbidden' },
 ]
 
 function App(): ReactElement {
